@@ -12,6 +12,6 @@
   grid-template-columns: repeat(16, 1fr);
 }
 
-.block:hover {
+.gridHover {
   background-color: red;
 }
