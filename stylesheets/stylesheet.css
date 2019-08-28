@@ -1,4 +1,8 @@
-.grid {
+.block {
   background: red;
   border: blue 1px solid;
 }
+
+.grid {
+  display: grid;
+
