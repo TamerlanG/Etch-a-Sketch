@@ -1,8 +1,17 @@
 .block {
-  background: red;
-  border: blue 1px solid;
+  padding: 5px;
+  border: black 1px solid;
+  width: 16px;
+  height: 16px;
 }
 
 .grid {
+  margin: auto;
+  width: 30%;
   display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
 
+.block:hover {
+  background-color: red;
+}
