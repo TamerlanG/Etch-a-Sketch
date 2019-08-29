@@ -33,7 +33,7 @@ body {
 .mainDiv {
   position: relative;
   left: 45%;
-  top: 0%;
+  top: -25%;
   width: 448px;
   border: 10px solid #a2e4be;
 }
@@ -42,24 +42,23 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  top: 40vh;
-  left: 10vh;
+  top: 30vh;
+  left: 15vh;
   width: 350;
   padding: 10px;
 }
 
 .head h1 {
   margin: 0;
-  margin-left: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 400;
   font-family: "Hepta Slab", serif;
   font-size: 40px;
   color: #a2e4be;
+  line-height: 45px;
 }
 
 .head button {
-  margin-left: 40px;
   text-transform: uppercase;
   padding: 10px;
   border-radius: 15px;
@@ -78,4 +77,24 @@ body {
   font-family: "Patrick Hand", cursive;
   font-weight: 800;
   font-size: 60px;
+}
+
+.head div {
+  margin-top: 10px;
+  color: #f6fdf9;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+input {
+  width: 290px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  background-color: white;
+  border: n;
+  border: 1px solid #fa8581;
+}
+
+.bottom {
+  margin-top: 10px;
 }

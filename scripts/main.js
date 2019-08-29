@@ -4,7 +4,6 @@ function createGrid() {
   let size = prompt("Please input size of grid");
   let totalBlocks = Math.pow(size, 2);
   let div;
-  console.log(htmlDocument);
 
   clearMainDiv();
 
@@ -36,4 +35,12 @@ function addHoverEffect() {
 
 function clearMainDiv() {
   mainContainer.innerHTML = "";
+}
+
+function clearGrid() {
+  let hoveredElements = document.querySelectorAll(".gridHover");
+
+  for (i = 0; i < hoveredElements.length; i++) {
+    hoveredElements[i].classList.remove("gridHover");
+  }
 }
