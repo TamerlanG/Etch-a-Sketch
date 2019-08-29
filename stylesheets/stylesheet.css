@@ -2,9 +2,15 @@
   --grid-value: repeat(autofit, 1fr);
 }
 
+body {
+  font-family: "Patrick Hand", cursive;
+  background-color: #31498a;
+  overflow: hidden;
+}
+
 .block {
   padding: 1px;
-  border: #000000 1px solid;
+  border: rgba(255, 0, 128, 0.2) 1px solid;
   width: auto;
   height: auto;
 }
@@ -17,16 +23,59 @@
   max-height: 448px;
   display: grid;
   grid-template-columns: var(--grid-value);
+  background-color: #f6fdf9;
 }
 
 .gridHover {
-  background-color: red;
+  background-color: #31498a;
 }
 
 .mainDiv {
   position: relative;
   left: 45%;
-  top: 5%;
+  top: 0%;
   width: 448px;
-  border: red solid 1px;
+  border: 10px solid #a2e4be;
+}
+
+.head {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 40vh;
+  left: 10vh;
+  width: 350;
+  padding: 10px;
+}
+
+.head h1 {
+  margin: 0;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-family: "Hepta Slab", serif;
+  font-size: 40px;
+  color: #a2e4be;
+}
+
+.head button {
+  margin-left: 40px;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #31498a;
+  border: 1px solid #fa8581;
+  color: #f6fdf9;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.head button:hover {
+  background-color: #fa8581;
+}
+
+.head span {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 800;
+  font-size: 60px;
 }
