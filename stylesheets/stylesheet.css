@@ -1,12 +1,10 @@
 :root {
   --grid-value: repeat(autofit, 1fr);
-  --block-width: 16px;
-  --block-height: 16px;
 }
 
 .block {
-  padding: 5px;
-  border: black 1px solid;
+  padding: 1px;
+  border: #000000 1px solid;
   width: auto;
   height: auto;
 }
@@ -30,4 +28,5 @@
   left: 45%;
   top: 5%;
   width: 448px;
+  border: red solid 1px;
 }
