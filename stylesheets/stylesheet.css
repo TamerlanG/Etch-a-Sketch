@@ -1,21 +1,33 @@
 :root {
-  --grid-value: repeat(16, 1fr);
+  --grid-value: repeat(autofit, 1fr);
+  --block-width: 16px;
+  --block-height: 16px;
 }
 
 .block {
   padding: 5px;
   border: black 1px solid;
-  width: 16px;
-  height: 16px;
+  width: auto;
+  height: auto;
 }
 
 .grid {
-  margin: auto;
-  width: 0%;
+  position: relative;
+  width: 448px;
+  height: 448px;
+  max-width: 448px;
+  max-height: 448px;
   display: grid;
   grid-template-columns: var(--grid-value);
 }
 
 .gridHover {
   background-color: red;
+}
+
+.mainDiv {
+  position: relative;
+  left: 45%;
+  top: 5%;
+  width: 448px;
 }
