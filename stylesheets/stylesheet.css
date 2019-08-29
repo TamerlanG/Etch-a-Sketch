@@ -1,3 +1,7 @@
+:root {
+  --grid-value: repeat(16, 1fr);
+}
+
 .block {
   padding: 5px;
   border: black 1px solid;
@@ -7,9 +11,9 @@
 
 .grid {
   margin: auto;
-  width: 30%;
+  width: 0%;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  grid-template-columns: var(--grid-value);
 }
 
 .gridHover {

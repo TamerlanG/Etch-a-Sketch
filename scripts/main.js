@@ -1,9 +1,10 @@
 let mainContainer = document.getElementById("main-wrapper");
-
+let gridTemplateColumns = document.documentElement;
 function createGrid() {
   let size = prompt("Please input size of grid");
   let totalBlocks = Math.pow(size, 2);
   let div;
+  console.log(gridTemplateColumns);
 
   clearMainDiv();
 
@@ -17,6 +18,8 @@ function createGrid() {
 }
 
 function styleBlock(divToStyle, sizeOfPixels) {
+  let gridTemplateNumber = "repeat(" + sizeOfPixels + ", 1fr)";
+  gridTemplateColumns.style.setProperty("--grid-value", gridTemplateNumber);
   divToStyle.classList.add("block");
 }
 
