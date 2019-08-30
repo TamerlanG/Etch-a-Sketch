@@ -10,25 +10,24 @@ function createGrid() {
   for (i = 1; i <= totalBlocks; i++) {
     div = document.createElement("div");
     styleBlock(div, size);
+
+    /*
+      Color Hover Effect here because I 
+      couldn't think of any other way
+      to shorten this function
+    */
+    div.addEventListener("mouseover", function() {
+      let colorOfChoice = document.getElementById("color-picker").value;
+      this.style.background = colorOfChoice;
+    });
     mainContainer.appendChild(div);
   }
-
-  addHoverEffect();
 }
 
 function styleBlock(divToStyle, sizeOfPixels) {
   let gridTemplateNumber = "repeat(" + sizeOfPixels + ", 1fr)";
   htmlDocument.style.setProperty("--grid-value", gridTemplateNumber);
   divToStyle.classList.add("block");
-}
-
-function addHoverEffect() {
-  let blocks = document.querySelectorAll(".block");
-  for (i = 0; i < blocks.length; i++) {
-    blocks[i].addEventListener("mouseover", function() {
-      this.classList.add("gridHover");
-    });
-  }
 }
 
 function clearMainDiv() {
@@ -44,13 +43,5 @@ function clearGrid() {
 }
 
 function changeColor() {
-  let colorOfChoice = document.getElementById("color-picker").value;
-  let oldColor = htmlDocument.style.getPropertyValue("--color");
-  let blocks = document.querySelectorAll(".block");
-  for (i = 0; i < blocks.length; i++) {
-    blocks[i].addEventListener("mouseover", function() {
-      this.classList.add("newGridHover");
-    });
-  }
-  htmlDocument.style.setProperty("--newColor", colorOfChoice);
+  htmlDocument.style.setProperty("--color", colorOfChoice);
 }

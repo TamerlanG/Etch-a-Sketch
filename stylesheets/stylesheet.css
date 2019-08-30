@@ -1,7 +1,6 @@
 :root {
   --grid-value: repeat(autofit, 1fr);
-  --color: #31498a;
-  --newColor: ;
+  --color: #f6fdf9;
 }
 
 body {
@@ -15,6 +14,7 @@ body {
   border: rgba(255, 0, 128, 0.2) 1px solid;
   width: auto;
   height: auto;
+  background-color: var(--color);
 }
 
 .grid {
