@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="images/logo-tab.jpg" />
     <title>Etch-A-Sketch</title>
   </head>
   <body>
@@ -21,7 +22,13 @@
       <button onclick="createGrid()">Reset Grid</button>
       <button onclick="clearGrid()">Clear</button>
       <div>
-        <input id="color-picker" type="color" name="color" value="#31498a" />
+        <input
+          onChange="changeColor()"
+          id="color-picker"
+          type="color"
+          name="color"
+          value="#31498a"
+        />
       </div>
       <div class="bottom">
         <button onclick="createGrid()">Random Colors</button>

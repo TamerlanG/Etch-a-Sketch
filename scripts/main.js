@@ -18,14 +18,12 @@ function createGrid() {
 
 function styleBlock(divToStyle, sizeOfPixels) {
   let gridTemplateNumber = "repeat(" + sizeOfPixels + ", 1fr)";
-  let blockSize = sizeOfPixels + "px";
   htmlDocument.style.setProperty("--grid-value", gridTemplateNumber);
   divToStyle.classList.add("block");
 }
 
 function addHoverEffect() {
   let blocks = document.querySelectorAll(".block");
-
   for (i = 0; i < blocks.length; i++) {
     blocks[i].addEventListener("mouseover", function() {
       this.classList.add("gridHover");
@@ -43,4 +41,16 @@ function clearGrid() {
   for (i = 0; i < hoveredElements.length; i++) {
     hoveredElements[i].classList.remove("gridHover");
   }
+}
+
+function changeColor() {
+  let colorOfChoice = document.getElementById("color-picker").value;
+  let oldColor = htmlDocument.style.getPropertyValue("--color");
+  let blocks = document.querySelectorAll(".block");
+  for (i = 0; i < blocks.length; i++) {
+    blocks[i].addEventListener("mouseover", function() {
+      this.classList.add("newGridHover");
+    });
+  }
+  htmlDocument.style.setProperty("--newColor", colorOfChoice);
 }

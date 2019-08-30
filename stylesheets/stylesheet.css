@@ -1,5 +1,7 @@
 :root {
   --grid-value: repeat(autofit, 1fr);
+  --color: #31498a;
+  --newColor: ;
 }
 
 body {
@@ -27,7 +29,11 @@ body {
 }
 
 .gridHover {
-  background-color: #31498a;
+  background-color: var(--color);
+}
+
+.newGridHover {
+  background-color: var(--newColor);
 }
 
 .mainDiv {
