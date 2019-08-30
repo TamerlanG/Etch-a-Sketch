@@ -35,13 +35,23 @@ function clearMainDiv() {
 }
 
 function clearGrid() {
-  let hoveredElements = document.querySelectorAll(".gridHover");
+  let blocks = document.querySelectorAll(".block");
 
-  for (i = 0; i < hoveredElements.length; i++) {
-    hoveredElements[i].classList.remove("gridHover");
+  for (let i = 0; i < blocks.length; i++) {
+    blocks[i].style.background = "#f6fdf9";
   }
 }
 
-function changeColor() {
-  htmlDocument.style.setProperty("--color", colorOfChoice);
+function startRandomColor() {
+  let blocks = document.querySelectorAll(".block");
+
+  for (let i = 0; i < blocks.length; i++) {
+    blocks[i].addEventListener("mouseover", function() {
+      blocks[i].style.background = randomRGB();
+    });
+  }
+}
+
+function randomRGB() {
+  return "#" + ((Math.random() * 0xffffff) << 0).toString(16);
 }
