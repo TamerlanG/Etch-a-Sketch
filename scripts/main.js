@@ -55,3 +55,20 @@ function startRandomColor() {
 function randomRGB() {
   return "#" + ((Math.random() * 0xffffff) << 0).toString(16);
 }
+
+function startGreyScale() {
+  let blocks = document.querySelectorAll(".block");
+
+  for (let i = 0; i < blocks.length; i++) {
+    blocks[i].addEventListener("mouseover", function() {
+      let currentOpacity = blocks[i].style.opacity;
+      console.log(currentOpacity);
+      blocks[i].style.background = "rgb(0,0,0)";
+      if (currentOpacity === "") {
+        blocks[i].style.opacity = 0.1;
+      } else {
+        blocks[i].style.opacity = "calc(" + currentOpacity + " + 0.1)";
+      }
+    });
+  }
+}
