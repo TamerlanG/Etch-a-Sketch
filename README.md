@@ -4,7 +4,6 @@ Etch A Sketch is a mechanical drawing made by HTML, CSS, and JS.
 
 ## Link
 [https://tamerlang.github.io/Etch-a-Sketch/](https://tamerlang.github.io/Etch-a-Sketch/)
-**Work in Progress..**
 
 ## Contributing
 
